@@ -1,23 +1,15 @@
-import type { MetaFunction } from "@remix-run/node";
-import MapComponent from "~/components/map-component";
-import { Analytics } from "@vercel/analytics/remix";
-export const meta: MetaFunction = () => {
-  return [
-    { title: "OpenIndoorMaps" },
-    {
-      name: "description",
-      content:
-        "OpenIndoorMaps is a community-based tool that helps people navigate large indoor spaces like malls, airports, hospitals, and universities. Collaborate and add your building to help others find their way.",
-    },
-  ];
-};
+import React from 'react'
+import Squares from '~/components/ui/Squares'
+// import FlickeringGrid from '~/components/ui/flicking-bg'
 
-export default function Index() {
+const Home = () => {
   return (
-    <div className="flex h-svh items-center justify-center">
-      <Analytics />
+    <div>Home
 
-      <MapComponent />
-    </div>
-  );
+      <div className="relative w-full h-[600px] overflow-hidden rounded-lg border bg-background">
+       <Squares/>
+      </div>    </div>
+  )
 }
+
+export default Home
